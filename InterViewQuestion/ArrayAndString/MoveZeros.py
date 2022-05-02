@@ -4,7 +4,7 @@
 # Output : [1,3,12,0,0]
 
 '''
-Example
+# Example
 
 moveZeroes(input){
     output = []
@@ -22,6 +22,23 @@ moveZeroes(input){
 
 '''
 
+'''
+# Solution by teacher
+
+Class Solution:
+
+    def moveZeros(self, nums: List[int]):
+        j = 0
+        for num in nums:
+            if num != 0:
+                nums[j] = num
+                j += 1 
+        
+        for x in range(j,len(nums)):
+            nums[x] = 0
+'''
+
+# My Solution 
 def moveZeros(inputArr):
 
     outputArr = [i for i in inputArr if i != 0]

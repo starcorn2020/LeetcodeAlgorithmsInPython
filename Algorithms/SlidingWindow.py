@@ -10,7 +10,7 @@
 
 
 '''
-Example 
+# Example 
 
 Function maxSum(arr,k):
     max_sum = NEGATIVE_INFINITY
