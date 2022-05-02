@@ -1,4 +1,4 @@
-# Explanation - Move Zeroes Brute force Intuition - Easy
+# Explanation - Move Zeroes - Easy
 
 # Input : [0,1,0,3,12]
 # Output : [1,3,12,0,0]
@@ -24,6 +24,7 @@ moveZeroes(input){
 
 '''
 # Solution by teacher
+from typing import List
 
 Class Solution:
 
@@ -36,6 +37,9 @@ Class Solution:
         
         for x in range(j,len(nums)):
             nums[x] = 0
+
+s = Solution
+s.moveZeroes([0,1,0,3,12])
 '''
 
 # My Solution 
