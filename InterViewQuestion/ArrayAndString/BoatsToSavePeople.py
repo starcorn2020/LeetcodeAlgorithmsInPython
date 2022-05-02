@@ -109,7 +109,7 @@ class Solutin:
                 heavyP-=1
                 lightP+=1
             else:
-                #  heavy one boats
+                # heavy one boats
                 boats+=1
                 heavyP-=1
 
