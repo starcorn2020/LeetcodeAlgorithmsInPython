@@ -25,41 +25,42 @@ Example:
 maxArea(height){
     max_area=0
     n = heights.length
-    for(p1=0,p1<n,p1++){
-        for(p2=p1+1,p2<n,p2++){
-            length = min(height[p1],height[p2])
-            width = p2-p1
-            area = length * width
-            max_area = max(max_area,area)
-        }
-
+    while(l<r){
+        length = min(heights[l],heights[r])
+        width = r-l
+        area = length*width
+        maxarea = max(maxarea,area)
+        if heights[l]<heights[r]:
+            l+=1
+        else:
+            r-=1
     }
 }
 
 '''
-
-
+from typing import List
 class Solution():
 
-    def searchMaxArea(self,arr) -> int:
+    def maxArea(self,height:List[int]) ->int:
 
-        max_area = 0
-        n = len(arr)-1
-        for i,valuee in enumerate(arr):
-            for j in range(i+1,n):
-                length = min(arr[i],arr[j])
-                width = j-i
-                area = length * width
-                max_area = max(max_area,area)
+        maxarea = 0
+        l = 0
+        r = len(height)-1
 
-        return max_area 
+        while(l<r):
 
-    def test():
-        print(123)
+            maxarea = max(maxarea,min(height[l],height[r])*(r-l))
+            if(height[l]<height[r]):
+                l+=1
+            else:
+                r-=1
+
+        return maxarea
 
 if __name__ == '__main__':
 
     arr = [5,9,2,4]
     s = Solution()
-    a = s.searchMaxArea(arr)
+    a = s.maxArea(arr)
     print(a)
+
